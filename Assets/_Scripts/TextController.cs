@@ -181,11 +181,21 @@ public class TextController : MonoBehaviour
 
     void corridor_0()
     {
-        text.text = "You are in a corridor.\n\n" +
-                    "Press P to Play again!";
-        if(Input.GetKeyDown(KeyCode.P))
+        text.text = "You're out of your cell, but not out of trouble." +
+                    "You are in the corridor, there's a closet and some stairs leading to " +
+                    "the courtyard. There's also various detritus on the floor.\n\n" +
+                    "C To view the Closet, F to inspect the Floor, and S to climb the Stairs.";
+        if(Input.GetKeyDown(KeyCode.S))
         {
-            myState = States.cell;
+            myState = States.stairs_0;
+        }
+        else if(Input.GetKeyDown(KeyCode.F))
+        {
+            myState = States.floor;
+        }
+        else if(Input.GetKeyDown(KeyCode.C))
+        {
+            myState = States.closet_door;
         }
     }
 
