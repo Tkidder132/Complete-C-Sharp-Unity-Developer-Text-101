@@ -67,7 +67,7 @@ public class TextController : MonoBehaviour
                 corridor_2();
                 break;
             case States.corridor_3:
-                corridor_3;
+                corridor_3();
                 break;
             case States.closet_door:
                 closet_door();
@@ -171,7 +171,7 @@ public class TextController : MonoBehaviour
                     "Press O to Open, or R to Return to your cell";
         if(Input.GetKeyDown(KeyCode.O))
         {
-            myState = States.freedom;
+            myState = States.corridor_0;
         }
         else if(Input.GetKeyDown(KeyCode.R))
         {
